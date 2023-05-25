@@ -1,0 +1,25 @@
+@mixin sizeWidth {
+  &[sizeWidth] {
+    &[sizeWidth='full'] {
+      --component-minWidth: var(--component-sizing-minWidth-full);
+    }
+    &[sizeWidth='auto'] {
+      --component-minWidth: var(--component-sizing-minWidth-auto);
+    }
+    &[sizeWidth='xs'] {
+      --component-minWidth: var(--component-sizing-minWidth-xs);
+    }
+    &[sizeWidth='sm'] {
+      --component-minWidth: var(--component-sizing-minWidth-sm);
+    }
+    &[sizeWidth='md'] {
+      --component-minWidth: var(--component-sizing-minWidth-md);
+    }
+    &[sizeWidth='lg'] {
+      --component-minWidth: var(--component-sizing-minWidth-lg);
+    }
+    &[sizeWidth='xl'] {
+      --component-minWidth: var(--component-sizing-minWidth-xl);
+    }
+  }
+}

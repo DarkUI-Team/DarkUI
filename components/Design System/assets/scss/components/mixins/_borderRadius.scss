@@ -1,0 +1,18 @@
+@use '../../util/' as u;
+
+@mixin borderRadius {
+  &[border] {
+    &[border='none'] {
+      border-radius: 0;
+    }
+    &[border='squared'] {
+      border-radius: #{u.em(8, 16)};
+    }
+    &[border='pilled'] {
+      border-radius: 99999px;
+    }
+    &[border='rounded'] {
+      border-radius: 50%;
+    }
+  }
+}

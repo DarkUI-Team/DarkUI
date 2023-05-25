@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 2px; */
+  /* flex-direction: column; */
+  height: 100vh;
+  gap: 6px;
+  /* flex-direction: column; */
+}
+.flex {
+  /* background-color: red; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

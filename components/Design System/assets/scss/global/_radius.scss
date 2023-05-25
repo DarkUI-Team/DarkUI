@@ -1,0 +1,7 @@
+@use '../util/' as u;
+$radius: (
+  squared: #{u.em(8, 16)},
+  rounded: 50%,
+  pill: 99999px,
+  none: 0,
+);

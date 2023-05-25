@@ -1,0 +1,66 @@
+// @use '../util/' as u;
+@use '../global/' as *;
+@use '../global/colors' as *;
+@use '../global/radius' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:where(*) {
+  margin: 0;
+  padding: 0;
+}
+:is(body, #root) {
+  width: 100%;
+  height: 100vh;
+  transition: 200ms;
+}
+
+// :root {
+//   //               Creating CSS Color Variables (_colors.scss)
+//   @each $color, $shades in $colors {
+//     @each $shade, $value in $shades {
+//       --darkui-clr-#{$color}-#{$shade}: #{$value};
+//     }
+//   }
+//   //               Creating CSS BorderRadius Variables (_radius.scss)
+//   @each $radiusType, $value in $radius {
+//     --darkui-borderRadius-#{$radiusType}: #{$value};
+//   }
+// }
+
+:where(body) {
+  min-block-size: 100vh; // minimal height of body
+}
+
+:where(img, picture, video, svg) {
+  max-inline-size: 100%;
+
+  &[undragable='true'] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
+:where(img, picture, video, svg)::selection {
+  background-color: transparent;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+  &[role='list'] {
+    list-style-type: none;
+  }
+}

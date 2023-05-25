@@ -1,0 +1,11 @@
+@mixin shape {
+  &[shape] {
+    aspect-ratio: 1/1;
+    &[shape='circle'] {
+      border-radius: var(--darkui-borderRadius-rounded);
+    }
+    &[shape='square'] {
+      border-radius: var(--darkui-borderRadius-squared);
+    }
+  }
+}

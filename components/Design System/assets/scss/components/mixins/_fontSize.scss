@@ -1,0 +1,19 @@
+@mixin fontSize {
+  &[FontSize] {
+    &[FontSize='xs'] {
+      --component-fontSize: var(--darkui-fontSize-xs);
+    }
+    &[FontSize='sm'] {
+      --component-fontSize: var(--darkui-fontSize-sm);
+    }
+    &[FontSize='md'] {
+      --component-fontSize: var(--darkui-fontSize-md);
+    }
+    &[FontSize='lg'] {
+      --component-fontSize: var(--darkui-fontSize-lg);
+    }
+    &[fontSize='xl'] {
+      --component-fontSize: var(--darkui-fontSize-xl);
+    }
+  }
+}

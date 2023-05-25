@@ -1,0 +1,42 @@
+@use "functions" as f;
+//320,680,1024,1400
+$breakpoint-up: (
+  "mobileS": f.rem(320),
+  "mobileM": f.rem(376),
+  "mobileL": f.rem(426),
+  "medium": f.rem(768),
+  "large": f.rem(1024),
+  "xlarge": f.rem(1400),
+  "xxlarge": f.rem(3200),
+);
+$breakpoint-down: (
+  "mobileS": f.rem(318),
+  "mobileM": f.rem(374),
+  "mobileL": f.rem(425),
+  "medium": f.rem(767),
+  "large": f.rem(1022),
+  "xlarge": f.rem(1398),
+  "xxlarge": f.rem(3198),
+);
+
+@mixin breakpoint-up($size) {
+  @media screen and (min-width: map-get($breakpoint-up,$size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoint-down,$size)) {
+    @content;
+  }
+}
+
+@mixin container-breakpoint-up($size) {
+  @container screen and (min-width: map-get($breakpoint-up,$size)) {
+    @content;
+  }
+}
+@mixin container-breakpoint-down($size) {
+  @container screen and (max-width: map-get($breakpoint-down,$size)) {
+    @content;
+  }
+} ;

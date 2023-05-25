@@ -1,0 +1,27 @@
+@mixin sizeHeight {
+  &[sizeHeight] {
+    &[sizeHeight='full'] {
+      --component-minHeight: var(--darkui-sizing-minHeight-full);
+    }
+    &[sizeHeight='auto'] {
+      --component-minHeight: var(--darkui-sizing-minHeight-auto);
+    }
+    &[sizeHeight='xs'] {
+      --component-minHeight: var(--darkui-sizing-minHeight-xs);
+    }
+    &[sizeHeight='sm'] {
+      --component-minHeight: var(--darkui-sizing-minHeight-sm);
+    }
+    &[sizeHeight='md'] {
+      // min-width: 9em;
+      --component-minHeight: var(--darkui-sizing-minHeight-md);
+    }
+    &[sizeHeight='lg'] {
+      // min-width: 12em;
+      --component-minHeight: var(--darkui-sizing-minHeight-lg);
+    }
+    &[sizeHeight='xl'] {
+      --component-minHeight: var(--darkui-sizing-minHeight-xl);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use 'sass:math' as math;
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return (math.div($pixel, 16) + rem);
+  }
+  @error 'Dont use unit (Only Number)';
+}
+@function em($pixel, $currentFontSize) {
+  @if (math.is-unitless($pixel) && math.is-unitless($currentFontSize)) {
+    @return (math.div($pixel, $currentFontSize) + em);
+  }
+  @error 'Dont use unit (Only Number)';
+}
+
+@function rgba($color, $alpha) {
+  @return ('#' + $color + $alpha);
+  @error 'Dont use unit (Only Number)';
+}
+
+@function full-Letter-Spacing($Font-Size, $letters-amount) {
+  @if math.is-unitless($Font-Size) {
+    @return (calc(100vw / $letters-amount - rem($Font-Size)));
+  }
+  @error 'Dont use unit (Only Numbers)';
+}

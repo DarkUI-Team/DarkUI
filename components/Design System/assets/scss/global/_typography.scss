@@ -1,0 +1,117 @@
+@use '../util/' as u;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,100,600,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700;900&display=swap');
+// TYPOGRAPHY SETTINGS
+
+:root {
+  --darkui-fonts-sans: 'inter';
+  --darkui-fonts-mono: Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
+    monospace;
+  --darkui-fontSize-xs: 0.75rem;
+  --darkui-fontSize-sm: 0.875rem;
+  --darkui-fontSize-base: 1rem;
+  --darkui-fontSize-md: 1rem;
+  --darkui-fontSize-lg: 1.125rem;
+  --darkui-fontSize-xl: 1.25rem;
+  --darkui-fontSize-2xl: 1.5rem;
+  --darkui-fontSize-3xl: 1.875rem;
+  --darkui-fontSize-4xl: 2.25rem;
+  --darkui-fontSize-5xl: 3rem;
+  --darkui-fontSize-6xl: 3.75rem;
+  --darkui-fontSize-7xl: 4.5rem;
+  --darkui-fontSize-8xl: 6rem;
+  --darkui-fontSize-9xl: 8rem;
+
+  //  LINE HEIGHT
+
+  --darkui-lineHeight-xs: 1rem;
+  --darkui-lineHeight-sm: 1.25rem;
+  --darkui-lineHeight-base: 1.5rem;
+  --darkui-lineHeight-lg: 1.75rem;
+  --darkui-lineHeight-xl: 1.75rem;
+}
+
+body {
+  font: inherit; // Reset Font to Inherit configuration
+  font-family: var(--darkui-fonts-sans);
+}
+
+:where(h1, h2, h3, h4, h5) {
+  display: inline-block;
+  font-family: var(--darkui-fonts-mono);
+  font-weight: 600;
+  line-height: 1.8;
+  color: currentColor;
+}
+:where(h1) {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+:where(h2) {
+  font-size: 2.441rem;
+}
+:where(h3) {
+  font-size: 1.953rem;
+}
+:where(h4) {
+  font-size: 1.563rem;
+}
+:where(h5) {
+  font-size: 1.25rem;
+}
+:is(small, .text_small) {
+  font-size: 0.8rem;
+}
+:where(p) {
+  // color: gray;
+  margin-bottom: 1rem;
+}
+a {
+  transition: 200ms;
+  &:is(:link, :visited) {
+    color: currentColor;
+    text-decoration: none;
+  }
+  &:hover {
+    color: var(--clr-complementary-400);
+  }
+}
+
+// <======== COLORS SCHEME
+@media (prefers-color-scheme: light) {
+  :where(h1, h2, h3, h4, h5) {
+    color: inherit, #525a7a;
+  }
+}
+
+@include u.breakpoint-down(mobileL) {
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 1.802rem;
+  }
+
+  h2 {
+    font-size: 1.602rem;
+  }
+
+  h3 {
+    font-size: 1.424rem;
+  }
+
+  h4 {
+    font-size: 1.266rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  small,
+  .text_small {
+    font-size: 0.889rem;
+  }
+}

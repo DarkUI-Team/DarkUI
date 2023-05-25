@@ -1,0 +1,83 @@
+@use 'colors' as *;
+@use 'radius' as *;
+@use 'space' as *;
+@use 'transitions' as *;
+@use '../util/' as u;
+
+:where(*) {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//               Setting Selection Color
+*::selection {
+  background-color: var(--clr-complementary-500);
+  color: white;
+}
+//               Creating CSS Color Variables (_colors.scss)
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      $red: red($value);
+      $green: green($value);
+      $blue: blue($value);
+      --darkui-clr-#{$color}-#{$shade}: #{$value};
+      --darkui-clr-#{$color}-#{$shade}-rgb: #{$red, $green, $blue};
+    }
+  }
+  @each $radiusType, $value in $radius {
+    --darkui-borderRadius-#{$radiusType}: #{$value};
+  }
+  @each $index, $value in $spacing {
+    --darkui-space-#{$index}: #{$value};
+  }
+  @each $index, $value in $transitions {
+    --darkui-transition-#{$index}: #{$value};
+  }
+}
+
+:where(html) {
+  color-scheme: dark light; // User prefer color scheme
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+:where(body) {
+  min-block-size: 100vh; // minimal height of body
+}
+
+:where(img, picture, video, svg) {
+  max-inline-size: 100%;
+
+  &[undragable='true'] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-drag: none;
+  }
+}
+::selection:where(img, picture, video, svg) {
+  background-color: transparent;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+  &[role='list'] {
+    list-style-type: none;
+  }
+}
