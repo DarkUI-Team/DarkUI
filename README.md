@@ -4,8 +4,11 @@
 <img src="https://user-images.githubusercontent.com/97305201/222236453-ddc29aca-9fdb-4b5a-a903-27dafb2ab331.png"/>
 
 --->
+
+
+
 <p align="center">
-  <img width="148" align="center" src="https://user-images.githubusercontent.com/97305201/222226401-add4e339-2025-4df9-9e67-aebb31f542b1.png"/>
+  <img width="100%" align="center" src="https://github.com/DarkUI-Team/DarkUI/assets/97305201/f4d93bc7-c7b5-43e2-bc34-de47d86289be.png"/>
 </p>
 <h1 align="center">DarkUI</h1>
 <p align="center">
