@@ -1,0 +1,10 @@
+*::-webkit-scrollbar {
+  background-color: transparent;
+  width: 1rem;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--clr-background-800);
+  @media (prefers-color-scheme: light) {
+    background-color: var(--clr-background-400);
+  }
+}

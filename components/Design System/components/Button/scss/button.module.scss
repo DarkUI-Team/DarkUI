@@ -1,0 +1,157 @@
+@use '../../../assets/scss/util' as u;
+@use '../../../assets/scss/components/mixins/color' as *;
+@use '../../../assets/scss/components/mixins/borderRadius' as *;
+@use '../../../assets/scss/components/mixins/shape' as *;
+@use '../../../assets/scss/components/mixins/fontSize' as *;
+@use '../../../assets/scss/components/mixins/sizeHeight' as *;
+@use '../../../assets/scss/components/mixins/sizeWidth' as *;
+
+.group {
+  width: 100%;
+  max-width: 3 00px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > :is(.button) {
+    max-width: var(--component-minWidth);
+    min-width: fit-content;
+
+    &:first-child {
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+    &:last-child {
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
+    }
+    &:not(&:first-child, &:last-child) {
+      border-radius: initial;
+    }
+  }
+}
+
+.button {
+  all: inherit;
+
+  --component-sizing-minWidth-full: 100%;
+  --component-sizing-minWidth-auto: auto;
+  --component-sizing-minWidth-xs: 5em;
+  --component-sizing-minWidth-sm: 6em;
+  --component-sizing-minWidth-md: 9em;
+  --component-sizing-minWidth-lg: 12em;
+  --component-sizing-minWidth-xl: 15em;
+
+  // --component-sizing-minWidth-xs: max(5em, 100%);
+  // --component-sizing-minWidth-sm: max(6em, 100%);
+  // --component-sizing-minWidth-md: max(9em, 100%);
+  // --component-sizing-minWidth-lg: max(12em, 100%);
+  // --component-sizing-minWidth-xl: max(15em, 100%);
+  // --component-sizing-minWidth-xs: min(5em, 100%);
+  // --component-sizing-minWidth-sm: min(6em, 100%);
+  // --component-sizing-minWidth-md: min(9em, 100%);
+  // --component-sizing-minWidth-lg: min(12em, 100%);
+  // --component-sizing-minWidth-xl: min(15em, 100%);
+
+  --component-margin: 0;
+  --component-padding: 0 0.5em;
+  --component-backgroundColor: var(--darkui-clr-500);
+
+  --component-border: none;
+  --component-borderRadius: var(--darkui-borderRadius-squared);
+
+  --component-maxHeight: var(--maxHeight);
+  --component-height: fit-content;
+  --component-minHeight: auto;
+
+  // --component-maxWidth: fit-content;
+  // --component-width: fit-content;
+  // --component-minWidth: fit-content;
+
+  --component-fontSize: var(--darkui-clr-500);
+  --component-fontWeight: 600;
+  --component-lineHeight: var(--darkui-clr-500);
+
+  // display: block;
+  position: relative;
+  overflow: hidden;
+  // isolation: isolate;
+  padding: var(--component-padding);
+  margin: var(--component-margin);
+  background-color: var(--component-backgroundColor);
+
+  border: var(--component-border);
+  border-radius: var(--component-borderRadius);
+
+  // max-width: max(var(--component-minWidth), 100%);
+  // width: var(--component-minWidth);
+  min-width: min(var(--component-minWidth), 100%);
+
+  max-height: var(--component-maxHeight);
+  height: var(--component-height);
+  min-height: var(--component-minHeight);
+
+  font-size: var(--component-fontSize);
+  font-weight: var(--component-fontWeight);
+  line-height: var(--component-lineHeight);
+
+  transition: var(--darkui-transition-normal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  vertical-align: middle;
+
+  cursor: pointer;
+  &:hover {
+    background-color: var(--darkui-clr-600);
+  }
+
+  &[ripple='false'] {
+    &:active {
+      transition: 0;
+      background-color: var(--darkui-clr-700);
+    }
+  }
+
+  &[Size] {
+    &[Size='auto'] {
+      --component-minWidth: var(--component-sizing-minWidth-auto);
+      --component-minHeight: var(--darkui-sizing-minHeight-auto);
+    }
+    &[Size='xs'] {
+      --component-fontSize: var(--darkui-fontSize-xs);
+      --component-minWidth: var(--component-sizing-minWidth-xs);
+      --component-minHeight: var(--darkui-sizing-minHeight-xs);
+    }
+    &[Size='sm'] {
+      --component-fontSize: var(--darkui-fontSize-sm);
+      --component-minWidth: var(--component-sizing-minWidth-sm);
+      --component-minHeight: var(--darkui-sizing-minHeight-sm);
+    }
+    &[Size='md'] {
+      --component-fontSize: var(--darkui-fontSize-md);
+      --component-minWidth: var(--component-sizing-minWidth-md);
+      --component-minHeight: var(--darkui-sizing-minHeight-md);
+    }
+    &[Size='lg'] {
+      --component-fontSize: var(--darkui-fontSize-lg);
+      --component-minWidth: var(--component-sizing-minWidth-lg);
+      --component-minHeight: var(--darkui-sizing-minHeight-lg);
+    }
+    &[Size='xl'] {
+      --component-fontSize: var(--darkui-fontSize-xl);
+      --component-minWidth: var(--component-sizing-minWidth-xl);
+      --component-minHeight: var(--darkui-sizing-minHeight-xl);
+    }
+  }
+
+  @include color;
+  @include fontSize;
+  @include sizeWidth;
+  @include sizeHeight;
+  @include borderRadius;
+  @include shape;
+}

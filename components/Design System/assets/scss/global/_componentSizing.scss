@@ -1,0 +1,11 @@
+@use '../util/' as u;
+
+:root {
+  --darkui-sizing-minHeight-xs: #{u.rem(24)};
+  --darkui-sizing-minHeight-sm: #{u.rem(32)};
+  --darkui-sizing-minHeight-md: #{u.rem(44)};
+  --darkui-sizing-minHeight-lg: #{u.rem(52)};
+  --darkui-sizing-minHeight-xl: #{u.rem(60)};
+  --darkui-sizing-minHeight-full: 100%;
+  --darkui-sizing-minHeight-auto: auto;
+}

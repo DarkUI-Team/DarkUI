@@ -1,0 +1,26 @@
+.rippleEffect {
+  background-color: white;
+
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pojawianko 700ms linear;
+  animation-fill-mode: backwards;
+  pointer-events: none;
+  @keyframes pojawianko {
+    from {
+      width: 0px;
+      height: 0px;
+      opacity: 0.4;
+    }
+    to {
+      opacity: 0;
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: black;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../util/" as u;
+.wrapper {
+  margin: auto;
+  width: 90%;
+  max-width: u.rem(1600);
+  margin: auto;
+
+  @include u.breakpoint-down(mobileL) {
+    width: 90%;
+  }
+}

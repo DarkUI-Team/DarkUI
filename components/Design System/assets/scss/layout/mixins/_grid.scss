@@ -1,0 +1,5 @@
+@use "../../util/" as u;
+
+@mixin grid--itemlist($style, $minItemWidth, $minItemHeight) {
+  grid-template-columns: repeat(auto-#{$style}, minmax(u.rem($minItemWidth), 1fr));
+}

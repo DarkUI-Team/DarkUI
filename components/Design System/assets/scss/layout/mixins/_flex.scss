@@ -1,0 +1,14 @@
+@use "../../util/" as u;
+@mixin flex__center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@mixin flex($direction, $justifycontent, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifycontent;
+  align-items: $align;
+}

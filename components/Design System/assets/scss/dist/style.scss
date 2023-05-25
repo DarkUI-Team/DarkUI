@@ -1,0 +1,17 @@
+@forward '../global/';
+
+//               Setting Selection Color
+*::selection {
+  background-color: var(--darkui-blue-500);
+  fill: color;
+  color: white;
+}
+:where(html) {
+  color-scheme: dark light; // User prefer color scheme
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+:is(body) {
+  background-color: black;
+}
