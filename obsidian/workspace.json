@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "75cd10232ed59d13",
+    "type": "split",
+    "children": [
+      {
+        "id": "617502771d80abc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5604f566b85f47b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Components/Loading.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "a21da567e68600f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16922fbc86929f68",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0e4b211da5377027",
+    "type": "split",
+    "children": [
+      {
+        "id": "dec63eca7fe17b5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0cd021154f937fa4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "672906a53a079cbd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7d8b85489029c7cd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b608011ffb562adc",
+    "type": "split",
+    "children": [
+      {
+        "id": "7b7af22d59e08d22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "664c9136019ea2a9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8b9a58e62a3fbf16",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eaf675f5ae2eeef3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ec4b0a595dc75e7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "16922fbc86929f68",
+  "lastOpenFiles": [
+    "Components/Loading.md",
+    "Components/Text.md",
+    "Components/List.md",
+    "Components/Separator.md",
+    "Functions",
+    "Components/Button/Button.md",
+    "Components/Button/Group.md",
+    "sizes.md",
+    "Types.md",
+    "Components/Button",
+    "Welcome.md",
+    "Components",
+    "Welcome.mdx"
+  ]
+}
